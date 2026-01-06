@@ -7,3 +7,8 @@ and rails s
 if yoc chnged second
 export NEW_CHECKOUT=true
 rails s
+
+
+3.Nexty
+export SHOW_PROMO=true
+rails s

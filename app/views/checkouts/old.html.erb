@@ -1,2 +1,8 @@
 <h1>Old Checkout</h1>
 <p>Stable checkout for all users.</p>
+
+<% if FeatureFlags.new(User.first).enabled?(:show_promo) %>
+  <div style="background-color: yellow; padding: 10px; margin-top: 10px;">
+    🎉 Promo: Free shipping for orders over $50!
+  </div>
+<% end %>

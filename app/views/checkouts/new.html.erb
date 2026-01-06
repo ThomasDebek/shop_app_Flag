@@ -1,5 +1,8 @@
 <h1>New Checkout 🚀</h1>
 <p>Visible only for admins.</p>
 
-
-<strong>This is Crazy !!!!!!!!!</strong>
+<% if FeatureFlags.new(User.first).enabled?(:show_promo) %>
+  <div style="background-color: yellow; padding: 10px; margin-top: 10px;">
+    🎉 Promo: Free shipping for orders over $50!
+  </div>
+<% end %>
