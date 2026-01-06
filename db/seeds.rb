@@ -7,3 +7,12 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+User.destroy_all
+Order.destroy_all
+
+admin = User.create!(name: "Admin", role: "admin")
+user = User.create!(name: "User", role: "user")
+
+
+Order.create!(total: 100, user: user)
+Order.create!(total: 200, user: admin)
